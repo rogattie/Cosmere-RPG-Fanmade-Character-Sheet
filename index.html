@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="big-section" id="big-section-character-data">
+        <h1>Character</h1>
+        <!-- .character-data is a 3-column grid (see style.css).
+                Each .character-data-field wraps a value + label pair, so the pair
+                occupies a single grid cell. The first three fields fill one row. -->
+        <div class="character-data">
+            <div class="character-data-field">
+                <div class="character-data-value" id="character-data-value-name">Kaladin Stromblessed</div>
+                <div class="character-data-label">Character Name</div>
+            </div>
+            <div class="character-data-field">
+                <div class="character-data-value" id="character-data-value-ancestry">Human</div>
+                <div class="character-data-label">Ancestry</div>
+            </div>
+            <div class="character-data-field">
+                <div class="character-data-value" id="character-data-value-level">1</div>
+                <div class="character-data-label">Character Level</div>
+            </div>
+            <!-- character-data-field-full makes this field span all three columns -->
+            <div class="character-data-field character-data-field-full">
+                <div class="character-data-value" id="character-data-value-path">Warrior (Shardbeaer), Radiant (Windrunner)</div>
+                <div class="character-data-label">Character Path</div>
+            </div>
+        </div>
+    </section>
+    <main>
+        <section>
+                <h2>ATRIBUTES</h2>
+                <div class="atributes-seperator">
+                    <div class="atributes-section" id="physical-atributes">
+                        <div class="single-atribute-box">
+                            <div class="atribute-name">Strength</div>
+                            <div class="atribute-value" id="atribute-value-str">2</div>
+                        </div>
+                        <div class="single-atribute-box">
+                            <div class="atribute-name">Physical Defense</div>
+                            <div class="atribute-value" id="atribute-value-phydef">14</div>
+                        </div>
+                        <div class="single-atribute-box">
+                            <div class="atribute-name">Speed</div>
+                            <div class="atribute-value" id="atribute-value-spd">2</div>
+                        </div>
+                    </div>
+                    <div class="atributes-section" id="cognitive-atributes">
+                        <div class="single-atribute-box">
+                            <div class="atribute-name">Intellect</div>
+                            <div class="atribute-value" id="atribute-value-str">2</div>
+                        </div>
+                        <div class="single-atribute-box">
+                            <div class="atribute-name">Cognitive Defense</div>
+                            <div class="atribute-value" id="atribute-value-phydef">14</div>
+                        </div>
+                        <div class="single-atribute-box">
+                            <div class="atribute-name">Willpower</div>
+                            <div class="atribute-value" id="atribute-value-spd">2</div>
+                        </div>
+                    </div>
+                    <div class="atributes-section" id="spiritual-atributes">
+                        <div class="single-atribute-box">
+                            <div class="atribute-name">Presence</div>
+                            <div class="atribute-value" id="atribute-value-str">2</div>
+                        </div>
+                        <div class="single-atribute-box">
+                            <div class="atribute-name">Spiritual Defense</div>
+                            <div class="atribute-value" id="atribute-value-phydef">14</div>
+                        </div>
+                        <div class="single-atribute-box">
+                            <div class="atribute-name">Willpower</div>
+                            <div class="atribute-value" id="atribute-value-spd">2</div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="main-wide-section">
+            <div class="left-main-wide-section">
+                <table class="skills-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Mod</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Atribute</th>
+                            <th scope="col">Ranks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>Athletics</td>
+                            <td>STR</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="right-main-wide-section">
+                <div>
+                    <h2>Talents</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Ethiopic:wght@100..900&family=Strait&display=swap');
+
+/* .strait-regular {
+  font-family: "Strait", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+ */
+
+ /* 
+.noto-serif-ethiopic-<uniquifier> {
+  font-family: "Noto Serif Ethiopic", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+
+:root {
+    --background-color: #eef1f5;
+    --font-color: #162030;
+    --label-color: #5a6778;
+
+    /* IMPORTED FONTS */
+    --label-font: "Strait", sans-serif;
+    --text-font: "Noto Serif Ethiopic", serif;
+
+
+    /* FONT SIZES */
+    --plain-text-size: 15px;
+    --label-text-size: 12px;
+    --header-1: 19px;
+    --header-2: 17px;
+    --wider-plain-text: 13px;
+    --atributes-value: 25px;
+}
+
+body {
+    font-size: var(--plain-text-size);
+    font-family: var(--text-font);
+    color: var(--font-color);
+    background-color: var(--background-color)
+}
+
+/* CHARACTER DATA LAYOUT
+   The container is a CSS grid. Each direct child (.character-data-field)
+   holds one value + its label, so the pair always stays together in one cell. */
+.character-data {
+    display: grid;
+    /* Three equal-width columns: Name | Ancestry | Level.
+       Change to e.g. "2fr 1fr 1fr" to make the first column wider. */
+    grid-template-columns: repeat(3, 1fr);
+    /* Space between cells: 12px between rows, 16px between columns. */
+    gap: 12px 16px;
+}
+
+/* A field with this class spans the whole row (used for Character Path).
+   "1 / -1" means: start at the first grid line, end at the last one. */
+.character-data-field-full {
+    grid-column: 1 / -1;
+}
+
+.character-data-label {
+    font-family: var(--label-font);
+    font-size: var(--label-text-size);
+    font-weight: bold;
+}
+
+.atributes-seperator {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+.atributes-seperator > .atributes-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+}
+
+.single-atribute-box {
+    border: 1px solid black;
+    padding: 2px;
+}
+
+.single-atribute-box > .atribute-name {
+    font-family: var(--label-font);
+    font-size: var(--label-text-size);
+    font-weight: bold;
+    text-align: center;
+}
+.single-atribute-box > .atribute-value {
+    font-size: var(--atributes-value);
+    text-align: center;
+}
+
+
+.main-wide-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.skills-table th, .skills-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
